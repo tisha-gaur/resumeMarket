@@ -1,0 +1,141 @@
+.marketplace {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.marketplace h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-decoration: underline;
+}
+
+.add {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.add .mobile-view {
+  width: 90%;
+  align-self: center;
+}
+
+.add .laptop-view {
+  padding: 1rem;
+  transition: transform 1s;
+  display: flex;
+  flex-direction: column;
+}
+
+.laptop-view .submit-button {
+  font-size: inherit;
+  width: fit-content;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.open {
+  transform: translateY(-150%);
+  display: none;
+}
+
+.close {
+  transform: translateY(0);
+}
+
+.tags {
+  width: 100%;
+  background-color: #e4e2e2;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.marketplaces {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.marketplaces p {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.marketplace-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+hr {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@keyframes openForm {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .marketplace-list {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .marketplace {
+    flex-direction: row;
+  }
+
+  .marketplace h2 {
+    font-size: 1.5rem;
+  }
+
+  .add {
+    width: 40%;
+    position: fixed;
+    height: calc(100vh - 110px);
+    border-right: 8px solid #048741;
+  }
+
+  .add .mobile-view {
+    display: none;
+  }
+
+  .laptop-view {
+    font-size: 1.1rem;
+  }
+
+  .marketplaces {
+    width: 60%;
+    margin: 0;
+    margin-left: 40%;
+  }
+
+  .marketplaces p {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .add {
+    width: 35%;
+  }
+
+  .marketplaces {
+    margin-left: 35%;
+  }
+}
